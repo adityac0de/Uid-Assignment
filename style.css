@@ -1,0 +1,34 @@
+body {
+  font-family: sans-serif;
+  background-color: #f0f0f0;
+}
+
+h1 {
+  text-align: center;
+  font-size: 30px;
+}
+
+p {
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.mouseevents {
+  background-color: #fff;
+}
+
+.loancalculator {
+  background-color: #ccc;
+}
+
+.studentregister {
+  background-color: #eee;
+}
+
+.security {
+  background-color: #f0f0f0;
+}

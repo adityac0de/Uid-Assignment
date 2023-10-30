@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Electricity Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f1d010;
+             padding: 0;
+            text-align: center;
+        }
+        
+        h1 {
+            color: #333;
+        }
+        
+        p {
+            color: #666;
+        }
+        
+        label {
+            display: block;
+            margin: 10px 0;
+            font-weight: bold;
+        }
+        
+        input[type="number"] {
+            padding: 5px;
+            width: 100px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        
+        button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        
+        button:hover {
+            background-color: #0056b3;
+        }
+        
+        #result {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>Electricity Calculator</h1>
+    <p>Calculate the energy usage of your appliance.</p>
+
+    <label for="powerInput">Power (in watts):</label>
+    <input type="number" id="powerInput" placeholder="Enter power in watts">
+
+    <label for="hoursInput">Hours of use:</label>
+    <input type="number" id="hoursInput" placeholder="Enter hours of use">
+
+    <button onclick="calculateEnergyUsage()">Calculate</button>
+
+    <p id="result">Energy Usage: <span id="energyUsage">0 kWh</span></p>
+
+    <script>
+        function calculateEnergyUsage() {
+            const power = parseFloat(document.getElementById("powerInput").value);
+            const hours = parseFloat(document.getElementById("hoursInput").value);
+            
+            if (!isNaN(power) && !isNaN(hours)) {
+                const energyUsage = (power * hours) / 1000; // Convert to kilowatt-hours (kWh)
+                document.getElementById("energyUsage").textContent = energyUsage.toFixed(2) + " kWh";
+            } else {
+                document.getElementById("energyUsage").textContent = "Invalid input. Please enter valid numbers.";
+            }
+        }
+    </script>
+</body>
+</html>
+

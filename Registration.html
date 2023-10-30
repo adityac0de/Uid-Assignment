@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <title>Student Register</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+</head>
+<style>
+    body{
+        background-image: url("naruto-final-form");
+        background-size: cover;
+    }
+</style>
+
+<body>
+    <h1>Student Register</h1>
+  <div class="studentregister">
+    <div class="">
+        <form class="px-4 py-3">
+          <div class="mb-3">
+            <label for="exampleDropdownFormEmail1" class="form-label">Name</label>
+            <input type="name" class="form-control" id="exampleDropdownFormEmail1" placeholder="abc">
+          </div>
+          <label for="exampleDropdownFormEmail1" class="form-label">Department</label>
+          <select class="form-select" id="edu">
+            <option selected disabled>department</option>
+            <option value="1">CYS</option>
+            <option value="2">AIE</option>
+            <option value="3">CSE</option>
+            <option value="4">ARE</option>
+            <option value="4">ECE</option>
+            <option value="4">MECH</option>
+          </select>
+          <div class="mb-3">
+            <label for="exampleDropdownFormEmail1" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="email@example.com">
+          </div>
+          <div class="mb-3">
+            <label for="exampleDropdownFormPassword1" class="form-label">Password</label>
+            <input type="password" class "form-control" id="exampleDropdownFormPassword1" placeholder="Password">
+          </div>
+          <div class="mb-3">
+            <div class="form-check">
+              <input type="checkbox" class="form-check-input" id="dropdownCheck">
+              <label class="form-check-label" for="dropdownCheck">
+                Remember me
+              </label>
+            </div>
+            <div class="g-recaptcha" data-sitekey="6Lf7jsgoAAAAAHkFdvbd3LQr7HRfSmVyyXad3237"></div>
+          </div>
+          <button type="submit" class="btn btn-primary">Sign in</button>
+        </form>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="#">New around here? <br>    Sign up</a>
+        <a class="dropdown-item" href="#">Forgot password?</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
